@@ -2,7 +2,7 @@
 
 # Nome da solução
 
-### Nome do grupo
+### Team Connect
 
 #### **Descrição**
 
