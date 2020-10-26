@@ -26,7 +26,7 @@ Ex:
 
 #### **Execução**
 
-Descreva um guia de como executar a aplicação e as tecnologias utilizadas.
+Descreva um guia de como executar a aplicação e as tecnologias utilizadas
 
 
 #### **Informações adicionais**
