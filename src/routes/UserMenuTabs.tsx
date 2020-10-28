@@ -3,13 +3,12 @@ import { Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Feather } from '@expo/vector-icons'; 
 
-import Home from '../pages/Home';
 import Messages from '../pages/Messages';
-import Post from '../pages/Post';
-import Profile from '../pages/Profile';
 
 import { RectButton, BorderlessButton } from 'react-native-gesture-handler';
 import { useNavigation } from '@react-navigation/native';
+import UserConfig from '../pages/UserConfig';
+import Home from '../pages/Home';
 
 
 
@@ -70,7 +69,7 @@ export default function UserMenuTabs() {
                 }} />
             <Tab.Screen
                 name="Ajustes"
-                component={Profile}
+                component={UserConfig}
                 options={{
                     tabBarLabel: 'Ajustes',
                     tabBarIcon: ({ color, size, focused }) => {

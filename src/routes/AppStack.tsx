@@ -11,6 +11,8 @@ import UserLogin from '../pages/UserLogin';
 import CompanyMenuTabs from './CompanyMenuTabs';
 import UserMenuTabs from './UserMenuTabs';
 import CompanyConfig from '../pages/CompanyConfig';
+import UserConfig from '../pages/UserConfig';
+import Home from '../pages/Home';
 
 
 const { Screen, Navigator } = createStackNavigator();
@@ -23,6 +25,7 @@ function AppStack() {
                 <Screen name='CompanyLogin' component={CompanyLogin}></Screen>   
                 <Screen name='UserLogin' component={UserLogin}></Screen>   
 
+                <Screen name='Home' component={Home}></Screen>   
 
                 <Screen name='CreateAccount' component={CreateAccount}></Screen>  
 
@@ -30,6 +33,7 @@ function AppStack() {
                 <Screen name='UserMenuTabs' component={UserMenuTabs} />
 
                 <Screen name='CompanyConfig' component={CompanyConfig} />
+                <Screen name='UserConfig' component={UserConfig} />
 
                 <Screen name='Chat' component={Chat} />
                 <Screen name='AppLoading' component={AppLoading} />
