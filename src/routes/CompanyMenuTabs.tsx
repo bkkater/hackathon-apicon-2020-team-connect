@@ -35,6 +35,7 @@ export default function CompanyMenuTabs() {
                     fontSize: 11,
                     marginBottom: 10                
                 },
+                keyboardHidesTabBar: true,
                 inactiveBackgroundColor: '#1D1D1D',
                 activeBackgroundColor: '#141414',
                 inactiveTintColor: '#87838E',

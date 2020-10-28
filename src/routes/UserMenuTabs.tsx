@@ -28,7 +28,8 @@ export default function UserMenuTabs() {
                     elevation: 0,
                     shadowOpacity: 0,
                     height: 75,
-                    backgroundColor: 'orange'
+                    backgroundColor: 'orange',
+                    position: 'absolute'
                 },
                 tabStyle: {
                     alignItems: 'center',
@@ -39,6 +40,7 @@ export default function UserMenuTabs() {
                     fontSize: 11,
                     marginBottom: 10                
                 },
+                keyboardHidesTabBar: true,
                 inactiveBackgroundColor: '#1D1D1D',
                 activeBackgroundColor: '#141414',
                 inactiveTintColor: '#87838E',
