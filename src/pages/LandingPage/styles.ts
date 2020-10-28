@@ -8,6 +8,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Ubuntu_500Medium',
         fontSize: 26,
         color: 'white',
+        marginBottom: 50
     },
     buttonGroup: {
         flexDirection: 'row',

@@ -3,10 +3,14 @@ import { View, Text } from 'react-native';
 
 import style from './styles';
 
-const CompanyHeader: React.FC = () => {
+interface CompanyHeaderProps {
+    user: string
+}
+
+const CompanyHeader: React.FC<CompanyHeaderProps> = ({user}) => {
     return (
         <View style={style.profileHeader}>
-            <Text style={style.bio}>@malubolos</Text>
+            <Text style={style.bio}>{user}</Text>
             <View style={{ borderBottomColor: '#e2dcdc', borderBottomWidth: 1, width: '100%' }} />
         </View>
     );

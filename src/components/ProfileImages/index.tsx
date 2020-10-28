@@ -3,15 +3,15 @@ import { View, Image } from 'react-native';
 
 import style from './styles';
 
-import image1 from '../../assets/feed/1.png'
-import image2 from '../../assets/feed/2.png'
-import image3 from '../../assets/feed/3.png'
-import image4 from '../../assets/feed/4.png'
-import image5 from '../../assets/feed/5.png'
-import image6 from '../../assets/feed/6.png'
-import image7 from '../../assets/feed/7.png'
-import image8 from '../../assets/feed/8.png'
-import image9 from '../../assets/feed/9.png'
+import image1 from '../../../assets/feed/1.png'
+import image2 from '../../../assets/feed/2.png'
+import image3 from '../../../assets/feed/3.png'
+import image4 from '../../../assets/feed/4.png'
+import image5 from '../../../assets/feed/5.png'
+import image6 from '../../../assets/feed/6.png'
+import image7 from '../../../assets/feed/7.png'
+import image8 from '../../../assets/feed/8.png'
+import image9 from '../../../assets/feed/9.png'
 import stories from '../../../assets/storie1.png'
 
 

@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     },
     profileNameText: {
         fontFamily: 'Ubuntu_500Medium',
-        fontSize: 25,
+        fontSize: 22,
         color: '#323232'
     },
     profileLocation: {

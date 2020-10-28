@@ -4,7 +4,8 @@ const styles = StyleSheet.create({
     profileHeader: {
         alignItems: 'center',
         height: 90,
-        justifyContent: 'flex-end'
+        justifyContent: 'flex-end',
+        backgroundColor: '#f0f0f0'
     },
     bio: {
         marginTop: 0,
