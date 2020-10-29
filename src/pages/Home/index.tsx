@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { View, Text, Image } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { View, Text, Image, Platform } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import { ScrollView } from 'react-native-gesture-handler';
 
@@ -18,6 +18,10 @@ import image03 from '../../../assets/destaque/3.png'
 import image04 from '../../../assets/destaque/4.png'
 import image05 from '../../../assets/destaque/5.png'
 import { profiles } from '../../utils/profiles';
+import { Constants } from 'expo';
+import { getCurrentPositionAsync, requestPermissionsAsync } from 'expo-location';
+import hereAPI from '../../services/hereAPI';
+import { hereKey } from '../../keys/hereKey';
 
 const storiesCompany = [
     {
@@ -47,11 +51,58 @@ const storiesCompany = [
     }
 ]
 
+interface CoordsProps {
+    latitude: number,
+    longitude: number
+}
+
+interface LocationProps {
+    itens: [
+        {
+            address: {
+                countryCode: string,
+                countryName: string,
+                stateCode: string,
+                state: string,
+                city: string,
+            }
+        }
+    ]
+}
+
 function Home() {
     const { navigate } = useNavigation();
-    
+    const [coords, setCoords] = useState<CoordsProps>();
+    const [location, setLocation] = useState<LocationProps>();
+    const [errorMsg, setErrorMsg] = useState<any>();
+
     const handleNavigateToProfileForUser = () => {
         navigate('ProfileForUser')
+    }
+
+    useEffect(() => {
+        (async () => {
+            let { status } = await requestPermissionsAsync();
+            if (status !== 'granted') {
+                setErrorMsg('Permission to access location was denied');
+            }
+
+            let location = await getCurrentPositionAsync({});
+            setCoords(location.coords);
+        })();
+
+        async function getReverseGeocode() {
+            const response = await hereAPI.get(`/revgeocode?at=${coords?.latitude},${coords?.longitude}&lang=pt-BR&apikey=${hereKey}`);
+
+            setLocation(response.data);
+        }
+    });
+
+    let text = 'Waiting...';
+    if (errorMsg) {
+        text = errorMsg;
+    } else if (location) {
+        text = JSON.stringify(location);
     }
 
     return (
@@ -90,14 +141,14 @@ function Home() {
 
                 <Text style={style.sectionTitle}>Negócios próximos</Text>
 
-                <SearchField placeholder='Busque por @ ou nome do negócio' user={true}/>
+                <SearchField placeholder='Busque por @ ou nome do negócio' user={true} />
                 {
-                        profiles.map(profile => (
-                            <ProfileCard
-                                key={profile.id}
-                                companyProfile={profile}
-                            />
-                        ))
+                    profiles.map(profile => (
+                        <ProfileCard
+                            key={profile.id}
+                            companyProfile={profile}
+                        />
+                    ))
                 }
             </ScrollView>
 
