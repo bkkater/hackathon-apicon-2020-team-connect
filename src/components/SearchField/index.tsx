@@ -9,13 +9,14 @@ import { TextInput } from 'react-native-gesture-handler';
 
 interface SearchFieldProps {
     placeholder: string;
+    user: boolean;
 }
 
-const SearchField: React.FC<SearchFieldProps> = ({ placeholder }) => {
+const SearchField: React.FC<SearchFieldProps> = ({ placeholder, user }) => {
     return (
 
             <View style={style.field}>
-                <Feather name="user" size={24} color="#959595" />
+                <Feather name={user ? 'user' : 'search'}size={24} color="#959595" />
                 <TextInput
                     placeholder={placeholder}
                     placeholderTextColor='#8B8B8B'

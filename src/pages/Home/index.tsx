@@ -81,7 +81,7 @@ function Home() {
 
                 <Text style={style.sectionTitle}>Negócios próximos</Text>
 
-                <SearchField placeholder='Busque por @ ou nome do negócio' />
+                <SearchField placeholder='Busque por @ ou nome do negócio' user={true}/>
 
                 {
                         profiles.map(profile => (
