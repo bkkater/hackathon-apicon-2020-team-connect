@@ -1,8 +1,7 @@
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
-    profileHeader: {
-        alignItems: 'center',
+    profileHeader: {    
         height: 90,
         justifyContent: 'flex-end',
         backgroundColor: '#f0f0f0'
@@ -13,6 +12,7 @@ const styles = StyleSheet.create({
         fontFamily: 'Ubuntu_400Regular',
         fontSize: 16,
         lineHeight: 21,
+        alignSelf: 'center',
     },
 })
 
