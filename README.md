@@ -1,8 +1,9 @@
+# Elo Go 🚀 em construção... 🚧
+
 <p align="center">
    <img src="./assets/logo-eloGo.png" alt="EloGo" width="280"/>
 </p>
 
-# Elo Go 🚀 em construção... 🚧
 
 <p align="center">	
   
