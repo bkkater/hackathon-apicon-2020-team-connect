@@ -7,13 +7,17 @@ import ProfileInstagram from '../ProfileInstagram';
 
 import style from './styles';
 
-const ProfileInformation: React.FC = () => {
+interface ProfileInformationProps {
+    user: boolean;
+}
+
+const ProfileInformation: React.FC<ProfileInformationProps> = ({ user }) => {
     return (
         <View style={{ flex: 1, padding: 20, backgroundColor: '#EEE' }}>
             <View style={style.profileDescription}>
-                <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
+                <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                     <Image source={logo} style={{ marginLeft: -8 }} />
-                    <ProfileInstagram/>
+                    <ProfileInstagram />
                 </View>
 
                 <View style={style.profileName}>
@@ -34,21 +38,21 @@ const ProfileInformation: React.FC = () => {
 
             <Text style={style.hashtag}>#abacaxi    #brigadeiro    #bolodefestas</Text>
 
-            <RectButton style={{ ...style.profileType, width: '100%' }}>
+            <RectButton style={!user ? { ...style.profileType, width: '100%' } : { display: 'none' }}>
                 <Text style={style.profileTypeText}>Editar perfil</Text>
             </RectButton>
 
             <View style={{ flexDirection: 'row', flex: 1 }}>
                 <RectButton style={{ ...style.profileType, marginRight: 5, width: '32.3%', backgroundColor: '#0091FF' }}>
-                    <Text style={style.profileTypeText}>Anúncios</Text>
+                    <Text style={style.profileTypeText}>{!user ? 'Anúncios' : 'Comprar'}</Text>
                 </RectButton>
 
                 <RectButton style={{ ...style.profileType, marginRight: 5, width: '32.3%' }}>
-                    <Text style={style.profileTypeText}>Informações</Text>
+                    <Text style={style.profileTypeText}>{!user ? 'Informações' : 'Mensagem'}</Text>
                 </RectButton>
 
                 <RectButton style={{ ...style.profileType, width: '32.3%' }}>
-                    <Text style={style.profileTypeText}>Contatos</Text>
+                    <Text style={style.profileTypeText}>{!user ? 'Contato' : 'Email'}</Text>
                 </RectButton>
             </View>
         </View>
