@@ -61,8 +61,6 @@ O Elo go é um aplicativo que irá conectar pequenos negócios locais aos possí
 
 # :computer:  **APIs utilizadas**
 
-Forneça em formato de lista todas as APIs utilizadas dos parceiros<br>
-Ex:
 1. Geolocalização Reversa - [**Here**](https://developer.here.com)
 
 # :construction_worker: Como rodar
