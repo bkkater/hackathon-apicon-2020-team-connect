@@ -4,7 +4,6 @@ const styles = StyleSheet.create({
     titleText: {
         fontFamily: 'Ubuntu_500Medium', 
         fontSize: 20, 
-        marginTop: 5
     },
     tinyText: {
         fontFamily: 'Ubuntu_400Regular', 

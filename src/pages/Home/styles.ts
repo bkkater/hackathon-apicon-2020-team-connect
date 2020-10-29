@@ -5,7 +5,8 @@ const styles = StyleSheet.create({
         fontFamily: 'Ubuntu_500Medium',
         fontSize: 20,
         marginVertical: 20
-    }
+    },
+    
 });
 
 

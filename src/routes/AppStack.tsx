@@ -17,6 +17,7 @@ import History from '../pages/History';
 import Messages from '../pages/Messages';
 import ProfileForUser from '../pages/ProfileForUser';
 import ProductDetails from '../pages/ProductDetails';
+import Payment from '../pages/Payment';
 
 const { Screen, Navigator } = createStackNavigator();
 
@@ -45,7 +46,7 @@ function AppStack() {
                 <Screen name='ProfileForUser' component={ProfileForUser} />
                 
                 <Screen name='ProductDetails' component={ProductDetails} />
-
+                <Screen name='Payment' component={Payment} />
 
                 <Screen name='AppLoading' component={AppLoading} />
             </Navigator>

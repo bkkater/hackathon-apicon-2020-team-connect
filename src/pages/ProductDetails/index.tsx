@@ -24,9 +24,9 @@ const ProductDetails: React.FC = () => {
 
       <Image
         source={{ uri: 'https://images.unsplash.com/photo-1551879400-111a9087cd86?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80' }}
-        style={{ width: '100%', height: '60%' }}
+        style={{ width: '100%', height: '55%' }}
       />
-      <View style={{ padding: 20 }}>
+      <View style={{ padding: 20, justifyContent: 'space-between'}}>
         <Text style={style.titleText}>Torta de frutas vermelhas</Text>
 
         <Text style={style.tinyText}>
@@ -40,7 +40,7 @@ const ProductDetails: React.FC = () => {
         <View style={{ flexDirection: 'row' }}>
           <Text style={{...style.tinyText, fontSize: 17}}>Preço médio:</Text>
 
-          <Text style={{...style.tinyText, fontSize: 17, marginLeft: 10, color: '#EF321F', }}>R$ 200,00</Text>
+          <Text style={{...style.tinyText, fontSize: 17, marginLeft: 10, color: '#EF321F' }}>R$ 200,00</Text>
         </View>
 
         <View style={{ flexDirection: 'row', justifyContent: 'center'}}>
