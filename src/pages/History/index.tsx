@@ -11,7 +11,7 @@ import style from './styles';
 
 const History: React.FC = () => {
     return (
-        <ScrollView style={{ padding: 20, marginBottom: 70 }}>
+        <ScrollView style={{ padding: 20 }}>
             <HomeHeader qr={false} />
 
             <Text style={style.sectionTitle}>Histórico de Compras</Text>
@@ -23,6 +23,8 @@ const History: React.FC = () => {
                     <HistoryCard orderCompany={productsHistory} />
                 ))
             }
+
+            <View style={{height: 80}}/>
 
         </ScrollView>
 
