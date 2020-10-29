@@ -14,6 +14,7 @@ import CompanyConfig from '../pages/CompanyConfig';
 import UserConfig from '../pages/UserConfig';
 import Home from '../pages/Home';
 import History from '../pages/History';
+import Messages from '../pages/Messages';
 
 
 
@@ -39,6 +40,8 @@ function AppStack() {
                 <Screen name='UserConfig' component={UserConfig} />
 
                 <Screen name='Chat' component={Chat} />
+                <Screen name='Messages' component={Messages} />
+
                 <Screen name='AppLoading' component={AppLoading} />
             </Navigator>
         </NavigationContainer>

@@ -6,11 +6,18 @@ import { Feather } from '@expo/vector-icons';
 
 import style from './styles';
 import ConfigOption from '../../components/ConfigOption';
+import { useNavigation } from '@react-navigation/native';
 
 const UserConfig: React.FC = () => {
+  const {navigate} = useNavigation();
+
+  const handleNavigateToMessages = () => {
+    navigate('Messages')
+  }
+
   return (
     <ScrollView>
-      <CompanyHeader user='@paulinhacptg' />
+      <CompanyHeader user='@paulinhacptg' goBackButton={false}/>
       <View style={{ padding: 20 }}>
         <View style={{ flexDirection: 'row', alignItems: 'center', marginBottom: 50 }}>
           <Feather name="user" size={40} color="black" />
@@ -21,7 +28,7 @@ const UserConfig: React.FC = () => {
         </View>
 
         <View>
-          <ConfigOption name='Mensagens' description='Minhas conversas' icon='message-circle' />
+          <ConfigOption name='Mensagens' description='Minhas conversas' icon='message-circle' onPress={handleNavigateToMessages} />
           <ConfigOption name='Minha conta' description='Configurações do perfil' icon='edit' />
           <ConfigOption name='Carteira' description='Meu saldo e QR Code' icon='credit-card' />
           <ConfigOption name='Configurações' description='' icon='settings' />
