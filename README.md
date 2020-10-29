@@ -1,5 +1,5 @@
 <p align="center">
-   <img src="/assets/logo-eloGO.png" alt="EloGo" width="280"/>
+   <img src="./assets/logo-eloGo.png" alt="EloGo" width="280"/>
 </p>
 
 # Elo Go 🚀 em construção... 🚧
@@ -14,7 +14,7 @@
   <a href="https://github.com/bkkater/happy/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/apiplaybook/hackathon-apicon-2020-team-connect?color=000000&style=for-the-badge">
   </a> 
-  <img alt="License" src="https://img.shields.io/badge/license-NOLICENSE-000000?style=for-the-badge">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-000000?style=for-the-badge">
 </p>
 
 # Team Connect
