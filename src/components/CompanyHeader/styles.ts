@@ -14,6 +14,12 @@ const styles = StyleSheet.create({
         lineHeight: 21,
         alignSelf: 'center',
     },
+    goBack: {
+        position: 'absolute',
+        left: 20,
+        alignItems: "center",
+        justifyContent: 'center',
+    }
 })
 
 export default styles;

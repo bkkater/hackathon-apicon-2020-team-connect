@@ -15,8 +15,8 @@ const CompanyHeader: React.FC<CompanyHeaderProps> = ({ user, goBackButton }) => 
     if (goBackButton) {
         return (
             <View style={style.profileHeader}>
-                <View style={{ flexDirection: 'row', paddingHorizontal: 15, width: '65%', justifyContent: 'space-between' }}>
-                    <BorderlessButton onPress={goBack}>
+                <View style={{ paddingHorizontal: 15, justifyContent: 'space-between' }}>
+                    <BorderlessButton onPress={goBack} style={style.goBack}>
                         <Text style={style.bio}>voltar</Text>
                     </BorderlessButton>
 
