@@ -13,6 +13,8 @@ import UserMenuTabs from './UserMenuTabs';
 import CompanyConfig from '../pages/CompanyConfig';
 import UserConfig from '../pages/UserConfig';
 import Home from '../pages/Home';
+import History from '../pages/History';
+
 
 
 const { Screen, Navigator } = createStackNavigator();
@@ -28,6 +30,7 @@ function AppStack() {
                 <Screen name='Home' component={Home}></Screen>   
 
                 <Screen name='CreateAccount' component={CreateAccount}></Screen>  
+                <Screen name='History' component={History}></Screen>  
 
                 <Screen name='CompanyMenuTabs' component={CompanyMenuTabs} />
                 <Screen name='UserMenuTabs' component={UserMenuTabs} />

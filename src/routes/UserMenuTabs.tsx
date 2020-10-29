@@ -1,26 +1,15 @@
 import * as React from 'react';
-import { Image } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Feather } from '@expo/vector-icons'; 
 
-import Messages from '../pages/Messages';
-
-import { RectButton, BorderlessButton } from 'react-native-gesture-handler';
-import { useNavigation } from '@react-navigation/native';
+import History from '../pages/History';
 import UserConfig from '../pages/UserConfig';
 import Home from '../pages/Home';
-
-
 
 const Tab = createBottomTabNavigator();
 
 export default function UserMenuTabs() {
-    const { navigate } = useNavigation();
     
-    function handleNavigateToPost(){
-        navigate('Post')
-    }
-
     return (
         <Tab.Navigator
             tabBarOptions={{
@@ -60,7 +49,7 @@ export default function UserMenuTabs() {
                 }} />
             <Tab.Screen
                 name="Compras"
-                component={Messages}
+                component={History}
                 options={{
                     tabBarLabel: 'Compras',
                     tabBarIcon: ({ color, size, focused }) => {
