@@ -20,7 +20,7 @@ const HistoryCard: React.FC<HistoryCardProps> = ({ orderCompany }) => {
     return (
         <View style={style.container}>
             <View style={style.content}>
-                <View style={{ flexDirection: 'row', alignItems: 'center' }}>
+                <View style={{ flexDirection: 'row', alignItems: 'center', maxWidth: 250 }}>
                     <Image
                         source={{ uri: orderCompany.image_uri }}
                         style={{ width: 60, height: 60, alignSelf: 'flex-start' }}
@@ -38,19 +38,18 @@ const HistoryCard: React.FC<HistoryCardProps> = ({ orderCompany }) => {
 
                         <View style={{ marginTop: 10, flexDirection: 'row' }}>
                             <Text style={style.amount}>1</Text>
-                    <Text style={{ ...style.companyUser, marginLeft: 15, color: '#333' }}>{orderCompany.product}</Text>
+                            <Text style={{ ...style.companyUser, marginLeft: 15, color: '#333' }}>{orderCompany.product}</Text>
                         </View>
 
                         <Text style={{ ...style.companyUser, color: '#333', marginTop: 10 }}>{`Total: R$${orderCompany.price},00`}</Text>
                     </View>
                 </View>
-                    <Text style={{ ...style.companyUser, color: '#333', alignSelf: 'flex-start', marginTop: 5 }}>{orderCompany.date}</Text>
+                <Text style={{ ...style.companyUser, color: '#333', alignSelf: 'flex-start', marginTop: 5 }}>{orderCompany.date}</Text>
             </View>
 
             <View style={style.footer}>
                 <Feather name="check-circle" size={20} color="#469F30" />
                 <Text style={{ ...style.companyUser, color: '#FFF', marginLeft: 10, marginBottom: 2 }}>Concluído</Text>
-
             </View>
         </View>
     );

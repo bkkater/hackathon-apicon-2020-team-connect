@@ -16,7 +16,7 @@ const styles = StyleSheet.create({
     },
     companyName: {
         fontFamily: 'Ubuntu_500Medium',
-        fontSize: 18
+        fontSize: 16,
     },
     companyUser: {
         fontFamily: 'Ubuntu_400Regular',
