@@ -5,7 +5,6 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import AppLoading from '../pages/AppLoading';
 import LandingPage from '../pages/LandingPage';
-import CreateAccount from '../pages/CreateAccount';
 import CompanyLogin from '../pages/CompanyLogin';
 import UserLogin from '../pages/UserLogin';
 import CompanyMenuTabs from './CompanyMenuTabs';
@@ -31,7 +30,6 @@ function AppStack() {
 
                 <Screen name='Home' component={Home}></Screen>   
 
-                <Screen name='CreateAccount' component={CreateAccount}></Screen>  
                 <Screen name='History' component={History}></Screen>  
 
                 <Screen name='CompanyMenuTabs' component={CompanyMenuTabs} />
