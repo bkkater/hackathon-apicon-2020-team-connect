@@ -25,10 +25,11 @@
 
 #### **Descrição**
 
-Descreva de forma breve o tipo de solução que seu time está desenvolvendo e de que forma ela foi idealizada.
+Pensando no cotidiano do brasileiro fomos atrás de como incluir os pagamentos digitais em compras nos pequenos negócios locais. Para tornar isso possível fizemos pesquisas e descobrimos os problemas que esses negócios encontram ao tentar se inserir nas redes sociais, em principal o Instagram. Sabemos como isso ajuda o negócio a crescer e ser encontrado por mais pessoas. 
+Por isso desenvolvemos o Elo go para ser uma forma de conectar esses dois grupos, quem busca clientes e quem busca serviços e produtos próximos. Incluindo nossas soluções de pagamentos digitais dentro da rotina dessas pessoas.
 
 #### **Solução**
-Descreva de forma breve o tipo de solução que seu time está desenvolvendo e de que forma ela foi idealizada.
+O Elo go é um aplicativo que irá conectar pequenos negócios locais aos possíveis clientes próximos que buscam aqueles serviços ou produtos. Nosso aplicativo irá utilizar diversas soluções de pagamento digital, como transferências, boletos e futuramente o PIX. Além disso, integramos nossa plataforma à API Elo que oferece pagamento através de QR Code. Nosso diferencial está na facilidade de gerenciamento dos produtos e serviços, vinculado ao Instagram, a rede mais utilizada para divulgação online, com a API de geolocalização da Here. Unindo esses dois lados será possível aproximar os pagamentos digitais das compras cotidianas dos brasileiros.
 
 
 # :bulb: **Tecnologias**
