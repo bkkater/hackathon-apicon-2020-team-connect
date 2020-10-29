@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, TouchableHighlight } from 'react-native';
 import { Feather } from '@expo/vector-icons';
 
 
@@ -17,30 +17,34 @@ const ConfigOption: React.FC<ConfigOptionProps> = ({ name, description, icon, on
 
     if (description === '') {
         return (
-            <RectButton style={style.optionBox} onPress={onPress}>
+            <TouchableHighlight style={style.optionBox} onPress={onPress} underlayColor="#e7e7e7">
+                <View style={{ flexDirection: 'row' , justifyContent: 'space-between', width: '100%'}}>
+                    <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
+                        <Feather name={icon} size={30} color="#323232" />
+                        <View style={{ marginLeft: 10 }}>
+                            <Text style={style.optionText}>{name}</Text>
+                        </View>
+                    </View>
+
+                    <Feather name='chevron-right' size={24} color="#323232" style={{marginTop: 5}}/>
+                </View>
+            </TouchableHighlight >
+        )
+    }
+    return (
+        <TouchableHighlight style={style.optionBox} onPress={onPress} underlayColor="#e7e7e7">
+            <View style={{ flexDirection: 'row' , justifyContent: 'space-between', width: '100%'}}>
                 <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
                     <Feather name={icon} size={30} color="#323232" />
                     <View style={{ marginLeft: 10 }}>
                         <Text style={style.optionText}>{name}</Text>
+                        <Text style={style.optionDescription}>{description}</Text>
                     </View>
                 </View>
 
-                <Feather name='chevron-right' size={24} color="#323232" />
-            </RectButton>
-        )
-    }
-    return (
-        <View style={style.optionBox}>
-            <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }}>
-                <Feather name={icon} size={30} color="#323232" />
-                <View style={{ marginLeft: 10 }}>
-                    <Text style={style.optionText}>{name}</Text>
-                    <Text style={style.optionDescription}>{description}</Text>
-                </View>
+                <Feather name='chevron-right' size={24} color="#323232" style={{marginTop: 5}}/>
             </View>
-
-            <Feather name='chevron-right' size={24} color="#323232" />
-        </View>
+        </TouchableHighlight >
     )
 }
 
