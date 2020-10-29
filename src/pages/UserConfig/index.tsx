@@ -15,6 +15,10 @@ const UserConfig: React.FC = () => {
     navigate('Messages')
   }
 
+  const handleNavigateToLanding = () => {
+    navigate('LandingPage')
+  }
+
   return (
     <ScrollView>
       <CompanyHeader user='@paulinhacptg' goBackButton={false}/>
@@ -33,7 +37,7 @@ const UserConfig: React.FC = () => {
           <ConfigOption name='Carteira' description='Meu saldo e QR Code' icon='credit-card' />
           <ConfigOption name='Configurações' description='' icon='settings' />
           <ConfigOption name='Ajuda' description='' icon='help-circle' />
-          <ConfigOption name='Sair' description='' icon='log-out' />
+          <ConfigOption name='Sair' description='' icon='log-out' onPress={handleNavigateToLanding}/>
         </View>
 
       </View>

@@ -12,7 +12,7 @@ function Profile() {
   return (
     <View style={{ flex: 1 }}>
       <StatusBar style='dark' />
-      <CompanyHeader user='@malubolos'/>
+      <CompanyHeader user='@malubolos' goBackButton={false}/>
 
       <ScrollView>
         <View>
