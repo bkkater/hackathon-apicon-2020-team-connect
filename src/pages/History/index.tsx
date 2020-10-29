@@ -20,7 +20,7 @@ const History: React.FC = () => {
 
             {
                 productsHistory.map((productsHistory) => (
-                    <HistoryCard orderCompany={productsHistory} />
+                    <HistoryCard orderCompany={productsHistory} key={productsHistory.id}/>
                 ))
             }
 

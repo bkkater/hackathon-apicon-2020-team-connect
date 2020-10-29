@@ -1,7 +1,9 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { View, Text, Image } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 import { ScrollView } from 'react-native-gesture-handler';
+
 import CompanyHighlightCard from '../../components/CompanyHighlightCard';
 import HomeHeader from '../../components/HomeHeader';
 import ProfileCard from '../../components/ProfileCard';
@@ -46,6 +48,12 @@ const storiesCompany = [
 ]
 
 function Home() {
+    const { navigate } = useNavigation();
+    
+    const handleNavigateToProfileForUser = () => {
+        navigate('ProfileForUser')
+    }
+
     return (
         <View>
             <StatusBar style='dark' />
@@ -74,6 +82,7 @@ function Home() {
                             <CompanyHighlightCard
                                 key={storieCompany.id}
                                 image={storieCompany}
+                                onPress={handleNavigateToProfileForUser}
                             />
                         ))
                     }
@@ -82,7 +91,6 @@ function Home() {
                 <Text style={style.sectionTitle}>Negócios próximos</Text>
 
                 <SearchField placeholder='Busque por @ ou nome do negócio' user={true}/>
-
                 {
                         profiles.map(profile => (
                             <ProfileCard
@@ -91,8 +99,6 @@ function Home() {
                             />
                         ))
                 }
-
-
             </ScrollView>
 
         </View>

@@ -8,6 +8,7 @@ import logo from '../../../assets/malucakeslogo.png'
 import style from './styles';
 import { RectButton } from 'react-native-gesture-handler';
 import ConfigOption from '../../components/ConfigOption';
+import { useNavigation } from '@react-navigation/native';
 
 const options = [
   {
@@ -37,9 +38,18 @@ const options = [
 ]
 
 const CompanyConfig: React.FC = () => {
+  const {navigate} = useNavigation();
+
+  const handleNavigateToMessages = () => {
+    navigate('Messages')
+  }
+
+  const handleNavigateToLanding = () => {
+    navigate('LandingPage')
+  }
   return (
     <ScrollView>
-      <CompanyHeader user='@malubolos'/>
+      <CompanyHeader user='@malubolos' goBackButton={false}/>
       <View style={{ padding: 20 }}>
         <View style={{ flexDirection: 'row', alignItems: 'center' }}>
           <Image source={logo} />
@@ -53,13 +63,13 @@ const CompanyConfig: React.FC = () => {
         </View>
 
         <View>
-          <ConfigOption name='Mensagens' description='Minhas conversas' icon='message-circle' />
+          <ConfigOption name='Mensagens' description='Minhas conversas' icon='message-circle' onPress={handleNavigateToMessages}/>
           <ConfigOption name='Minha conta' description='Configurações do perfil' icon='edit' />
           <ConfigOption name='Carteira' description='Meu saldo e QR Code' icon='credit-card' />
           <ConfigOption name='Controle financeiro' description='Meu planejameto' icon='trending-up' />
           <ConfigOption name='Configurações' description='' icon='settings' />
           <ConfigOption name='Ajuda' description='' icon='help-circle' />
-          <ConfigOption name='Sair' description='' icon='log-out' />
+          <ConfigOption name='Sair' description='' icon='log-out' onPress={handleNavigateToLanding} />
         </View>
 
       </View>

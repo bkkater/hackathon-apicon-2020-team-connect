@@ -16,7 +16,7 @@ function Profile() {
 
       <ScrollView>
         <View>
-          <ProfileInformation/>
+          <ProfileInformation user={false}/>
 
           <ProfileImages />
 

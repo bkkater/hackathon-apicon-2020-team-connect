@@ -15,8 +15,8 @@ import UserConfig from '../pages/UserConfig';
 import Home from '../pages/Home';
 import History from '../pages/History';
 import Messages from '../pages/Messages';
-
-
+import ProfileForUser from '../pages/ProfileForUser';
+import ProductDetails from '../pages/ProductDetails';
 
 const { Screen, Navigator } = createStackNavigator();
 
@@ -41,6 +41,11 @@ function AppStack() {
 
                 <Screen name='Chat' component={Chat} />
                 <Screen name='Messages' component={Messages} />
+                
+                <Screen name='ProfileForUser' component={ProfileForUser} />
+                
+                <Screen name='ProductDetails' component={ProductDetails} />
+
 
                 <Screen name='AppLoading' component={AppLoading} />
             </Navigator>
