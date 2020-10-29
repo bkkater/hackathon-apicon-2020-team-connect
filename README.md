@@ -31,7 +31,16 @@ Por isso desenvolvemos o Elo go para ser uma forma de conectar esses dois grupos
 #### **Solução**
 O Elo go é um aplicativo que irá conectar pequenos negócios locais aos possíveis clientes próximos que buscam aqueles serviços ou produtos. Nosso aplicativo irá utilizar diversas soluções de pagamento digital, como transferências, boletos e futuramente o PIX. Além disso, integramos nossa plataforma à API Elo que oferece pagamento através de QR Code. Nosso diferencial está na facilidade de gerenciamento dos produtos e serviços, vinculado ao Instagram, a rede mais utilizada para divulgação online, com a API de geolocalização da Here. Unindo esses dois lados será possível aproximar os pagamentos digitais das compras cotidianas dos brasileiros.
 
+## 📥 Layout disponivel em:  
+<p align="center">
+    <a title=".fig Mobile" href="https://www.figma.com/file/lEZ6yiuNhiQ25BeUtnAyZJ/Hackathon-ELO?node-id=1%3A2/duplicate">
+        <img alt="Figma" src="https://img.shields.io/badge/Hackathon EloGo-black?style=flat-square&logo=figma&logoColor=red" width="215px"/>
+    </a>
+</p>
 
+### Mobile Screenshot
+  <img src="./.github/mockup.png" width="300">
+  
 # :bulb: **Tecnologias**
 
 <details>
@@ -66,7 +75,7 @@ Acesse: http://localhost:3000/ para ver o resultado.
 Para rodar o projeto mobile você precisa de um celular com o [expo](https://play.google.com/store/apps/details?id=host.exp.exponent) instlado ou um emulador android/ios.
 
 ```bash
-# Vá para a pasta mobile
+# Vá para a pasta
 $ cd hackathon-apicon-2020-team-connect.git
 # Instale as depedencias
 $ yarn install
